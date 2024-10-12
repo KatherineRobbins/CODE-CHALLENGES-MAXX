@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="n">
+    <button onclick="callGetFib()">Find Fibonacci</button>
+
+                                                                                                                                                                                                                                                                                                         
+
+
+
+    <script>
+        function getFib(n) {
+	
+	if (n == 0) {
+ 		return 0;
+  }
+  else if (n == 1) {
+  	return 1;
+  }
+  else {
+  	return getFib(n - 1) + getFib(n - 2);
+  }
+
+}
+
+function callGetFib() {
+	var n = document.getElementById("n").value;
+  if (n > 30 || n < 0) {
+  	alert("Please enter a number less than or equal to 30 and greater than or equal to 0!!!!");
+    exit();
+  }
+  var result = getFib(n);
+  alert(result);
+}
+    </script>
+</body>
+</html>
