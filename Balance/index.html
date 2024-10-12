@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="inputString">
+<button onclick="checkBalance()">
+Find Balance
+</button>
+    
+
+
+
+<script>
+  function checkBalance() {
+	var inputString = document.getElementById("inputString").value
+	var counter = 0;
+  
+  for (i = 0; i < inputString.length; i++) {
+  	if (inputString[i]=="(") {
+    	counter++;
+    }
+    else if (inputString[i]==")") {
+    	counter--;
+    }
+    if (counter < 0) {
+    	alert("Not Balanced!");
+      return false;
+    }
+  }
+	if (counter == 0) {
+ 		alert("Balanced!")
+  	return true;
+ 	}
+    
+ 
+  
+  
+  
+}  
+</script>
+</body>
+</html>
