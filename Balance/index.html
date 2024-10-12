@@ -20,10 +20,10 @@ Find Balance
 	var counter = 0;
   
   for (i = 0; i < inputString.length; i++) {
-  	if (inputString[i]=="(") {
+  	if (inputString[i]==="(") {
     	counter++;
     }
-    else if (inputString[i]==")") {
+    else if (inputString[i]===")") {
     	counter--;
     }
     if (counter < 0) {
@@ -31,10 +31,14 @@ Find Balance
       return false;
     }
   }
-	if (counter == 0) {
- 		alert("Balanced!")
+	if (counter === 0) {
+ 		alert("Balanced!");
   	return true;
  	}
+    else {
+        alert("Not Balanced");
+        return false
+    }
     
  
   
