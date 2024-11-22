@@ -6,28 +6,29 @@ namespace LargestElement
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Let's find the largest element in an array of 3 numbers");
+            WriteLine("Enter the number of elements in your array:");
+            int a = Convert.ToInt32(Console.ReadLine());
 
-            int[] num = new int[3];
+
+            int[] num = new int[a];
 
             
-                WriteLine("1st number");
-                num[0] = Convert.ToInt32(Console.ReadLine());
+                WriteLine("enter your elements of the array");
 
-                WriteLine("2nd number");
-                num[1] = Convert.ToInt32(Console.ReadLine());
-
-                WriteLine("3rd number");
-                num[2] = Convert.ToInt32(Console.ReadLine());
+            for(int x = 0; x < a; x++)
+            {
+                num[x] = Convert.ToInt32(Console.ReadLine());
+            }
+               
 
             int largest = num[0];
 
             for (int x = 1; x < num.Length; x++)
-            {
+           {
                 if (num[x] > largest)
                 {
-                    largest = num[x];
-                }
+                  largest = num[x];
+              }
             }
             WriteLine("the largest number in the array is " + largest);
 
